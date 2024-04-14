@@ -114,7 +114,7 @@ LOG="/var/log/$(echo $0 | cut -d'/' -f2)"
 # Variáveis de configuração do usuário root e senha do MySQL para acesso via console e do PhpMyAdmin
 # Observação: essa senha será utilizada no usuário: ocs do Banco de Dados do OCS Inventory
 USER="root"
-PASSWORD="pti@2018"
+PASSWORD="zebr@tlp44"
 #
 # Variável de download do OCS Inventory Server e Reports
 # Site: https://www.ocsinventory-ng.org/en/
@@ -146,14 +146,14 @@ export DEBIAN_FRONTEND="noninteractive"
 # Verificando se o usuário é Root, Distribuição é >=18.04 e o Kernel é >=4.15 <IF MELHORADO)
 # [ ] = teste de expressão, && = operador lógico AND, == comparação de string, exit 1 = A maioria dos erros comuns na execução
 clear
-if [ "$USUARIO" == "0" ] && [ "$UBUNTU" == "18.04" ] && [ "$KERNEL" == "4.15" ]
+if [ "$USUARIO" == "0" ] && [ "$UBUNTU" == "22.04" ] && [ "$KERNEL" == "5.15" ]
 	then
 		echo -e "O usuário é Root, continuando com o script..."
-		echo -e "Distribuição é >= 18.04.x, continuando com o script..."
-		echo -e "Kernel é >= 4.15, continuando com o script..."
+		echo -e "Distribuição é >= 22.04.x, continuando com o script..."
+		echo -e "Kernel é >= 5.15, continuando com o script..."
 		sleep 5
 	else
-		echo -e "Usuário não é Root ($USUARIO) ou Distribuição não é >=18.04.x ($UBUNTU) ou Kernel não é >=4.15 ($KERNEL)"
+		echo -e "Usuário não é Root ($USUARIO) ou Distribuição não é >=22.04.x ($UBUNTU) ou Kernel não é >=5.15 ($KERNEL)"
 		echo -e "Caso você não tenha executado o script com o comando: sudo -i"
 		echo -e "Execute novamente o script para verificar o ambiente."
 		exit 1
